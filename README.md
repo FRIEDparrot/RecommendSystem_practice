@@ -2,7 +2,7 @@
 
 ### Introduction
 
-😃 This code is a simple **recommendation system****, also a good practice for beginners.
+😃 This code is a simple **recommendation system**, also a good practice for beginners.
 
 ### Dataset and Purpose
 
