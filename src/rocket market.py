@@ -199,7 +199,7 @@ class Rocket_Market():
         axes[0].pie(
             data1,
             labels = ["in recommend", "not in recommend"],
-            autopct=lambda pct: f"{pct:.1f}%\n{int(pct * np.sum(data1))}/{np.sum(data1)}",
+            autopct=lambda pct: f"{pct:.1f}%\n{int(pct * np.sum(data1)/100)}/{np.sum(data1)}",
             explode = [0.05, 0],
             colors = colors1
         )
@@ -209,7 +209,7 @@ class Rocket_Market():
         axes[1].pie(
             data2,
             labels = ["hit cases", "not viewed cases"],
-            autopct=lambda pct: f"{pct:.1f}%\n{int(pct * np.sum(data2))}/{np.sum(data2)}",
+            autopct=lambda pct: f"{pct:.1f}%\n{int(pct * np.sum(data2)/100)}/{np.sum(data2)}",
             explode=[0.05, 0],
             colors = colors2
         )

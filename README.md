@@ -76,6 +76,12 @@ During the training process,  the model's building information would be printed 
    
    - **Action:** If this value is too large, **increase** `self.cluster_number` to balance the clusters and prevent the ItemCF matrix from becoming excessively large. 
 
+3. **cluster inertia**:
+    Refers to the min square error in one cluster 
+   
+   - this gives a cluster error result, smaller is good but not always best. 
+   - this info is not so critical
+
 ### Model Prediction Results
 
 **Model Training Time** : about 5 minutes (292 seconds) 
@@ -86,6 +92,6 @@ During the training process,  the model's building information would be printed 
 
 the information after train the model are listed in the following figure : 
 
-![](attachments/2024-11-24-11-29-19-image.png)
+![](attachments/2024-11-24-12-10-52-image.png)
 
 note that the recommend system may get a lower recall rate when predict the add_to_cart behavior (about 60% to 70%) 
