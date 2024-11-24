@@ -14,7 +14,7 @@ This project uses the [Retailrocket Recommender System Dataset](https://www.kagg
 
 These events are produced by **1,407,580 unique visitors**.
 
-Instead of focusing on the traditional prediction tasks suggested by the dataset, this recommendation system emphasizes:
+Instead of focusing on the prediction tasks suggested by the dataset, this recommendation system emphasizes:
 
 1. **User-User Collaborative Filtering (UserCF):** Creating a user-based collaborative filtering matrix.
 2. **Item-Item Collaborative Filtering (ItemCF):** Building an item-based collaborative filtering matrix.
