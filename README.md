@@ -14,21 +14,15 @@ This project uses the [Retailrocket Recommender System Dataset](https://www.kagg
 
 These events are produced by **1,407,580 unique visitors**.
 
-
-
 Instead of focusing on the traditional prediction tasks suggested by the dataset, this recommendation system emphasizes:
 
 1. **User-User Collaborative Filtering (UserCF):** Creating a user-based collaborative filtering matrix.
 2. **Item-Item Collaborative Filtering (ItemCF):** Building an item-based collaborative filtering matrix.
 3. **Behavior Prediction:** Predicting user view behavior within the partition of items they have already interacted with. 
 
-
-
 ### Getting Started
 
 Run the script `rocket_market.py` located in the `src` folder to generate the UserCF and ItemCF matrices and perform behavior predictions.
-
-
 
 1. Firstly the code would use `treelib` to show following tree view of categories tree, if you don't have it, use `pip installl treelib` or directly comment  `self.__get_category_tree()` if no need to show.  
 
@@ -36,23 +30,17 @@ Run the script `rocket_market.py` located in the `src` folder to generate the Us
 
 > note : if messy code happens, see [my blog](https://blog.csdn.net/sbsbsb666666/article/details/142212249?spm=1001.2014.3001.5501) for solution
 
-
-
-2.  Secondly it shows **the top-k  items of view, addtocart and transaction**, similar code can be found at  [recommender-system-for-beginners](https://www.kaggle.com/code/aafrin/retail-rocket-recommender-system-for-beginners) 
+2. Secondly it shows **the top-k  items of view, addtocart and transaction**, similar code can be found at  [recommender-system-for-beginners](https://www.kaggle.com/code/aafrin/retail-rocket-recommender-system-for-beginners) 
 
 ![](attachments/2024-11-24-10-20-30-image.png)
 
 3. Then it would build the main recommendation system model, which would be explained in detail later. 
-
-
 
 ### How the model works
 
 The model train process and prediction are explained in the following figure : 
 
 ![](attachments/2024-11-24-10-47-48-image.png)
-
-
 
 ### Model Parameters
 
@@ -87,8 +75,6 @@ During the training process,  the model's building information would be printed 
    Refers to the largest cluster size.
    
    - **Action:** If this value is too large, **increase** `self.cluster_number` to balance the clusters and prevent the ItemCF matrix from becoming excessively large. 
-   
-   
 
 ### Model Prediction Results
 
@@ -100,10 +86,6 @@ During the training process,  the model's building information would be printed 
 
 the information after train the model are listed in the following figure : 
 
-![](E:\GoogleSync\ClassReview\attachments\Pasted%20image%2020241124090503.png)
+![](attachments/2024-11-24-11-29-19-image.png)
 
 note that the recommend system may get a lower recall rate when predict the add_to_cart behavior (about 60% to 70%) 
-
-
-
-
